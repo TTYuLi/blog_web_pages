@@ -1,0 +1,20 @@
+
+.topList {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 10px;  
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+.topList:hover {
+  background-color: rgb(243, 243, 243);
+  border-left: 3px solid rgb(16, 142, 233);
+}
+.topList img {
+  width: 100%;
+  height: 100%;
+}
+
+.item_info {
+  padding-left: 16px;
+}

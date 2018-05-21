@@ -1,0 +1,203 @@
+ /* 欢迎 */
+.welcome {
+  width: 1200px;
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+  font-size: 12px;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+}
+.welcome .time {
+  float: left;
+}
+.welcome .greeting {
+  float: right;
+}
+/* logo */
+.banner {
+  height: 180px;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+/* 导航 */
+.nav {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(73, 65, 65, 0.4);
+}
+.nav-content {
+  width: 1200px;
+  margin: 0 auto;
+}
+.nav .logo{
+  width: 110px;
+  height:50px;
+  display: block;
+  background: url('/assets/logo.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+.gutter-box {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  /* background: #00A0E9; */
+  /* padding: 5px 0; */
+}
+ i{
+  margin-right:5px;
+}
+.aboutme i {
+  color: #ff2289;
+}
+.gutter-box:nth-last-child(n-1):hover {
+  color: #fff;
+  background: #00A0E9;
+  border-bottom: 3px solid #000;
+}
+.active {
+  color: #fff;
+  background: #00A0E9;
+  border-bottom: 3px solid #000;
+}
+.main {
+  margin-top: 40px;
+}
+.main-content {
+  width: 1200px;
+}
+/* card css */
+.aside .card {
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  background-color: #fff;
+  padding: 12px;
+}
+.ant-avatar-lg {
+  width: 70px;
+  height: 70px;
+  line-height: 40px;
+  border-radius: 5px;
+}
+:host ::ng-deep .ant-avatar {
+  margin-top: 10px;
+}
+.card .title {
+  margin-bottom: 5px;
+}
+.card .cardWord {
+  font-size: 10px;
+  color:#e79696;
+  text-align: justify;
+}
+.interact {
+  height: 30px;
+  line-height: 30px;
+  margin-top: 10px;
+  text-align: center;
+}
+.view {
+  border-right: 1px solid #ccc;
+}
+.view:hover, .message:hover {
+  color: #ff2289;
+}
+/* hot css */
+.hot {
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  background-color: #fff;
+  padding: 12px;
+}
+:host ::ng-deep .ant-tabs-nav .ant-tabs-tab {
+  display: inline-block;
+  height: 100%;
+  margin-right: 0;
+  box-sizing: border-box;
+  position: relative;
+  padding: 4px 24px;
+  transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+  text-decoration: none;
+}
+.tag {
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  background-color: #fff;
+  padding: 12px;
+}
+.tag-info {
+  margin-top: 12px;
+}
+.leaveMeaasge {
+  margin-top: 15px;  
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  background-color: #fff;
+  padding: 12px;
+}
+:host ::ng-deep .ant-avatar {
+  margin-top: 0px;
+}
+.messageList {
+  margin: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.messageList:last-child {
+  border: none;
+}
+.listTime {
+  text-align: right;
+}
+.friend, .readers{
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  background-color: #fff;
+  padding: 12px;
+}
+/* 读者墙 */
+.readerList {
+  margin-top: 15px;
+}
+/* 广告链接 */
+.frindLink {
+ 
+}
+.frindLink_content {
+  margin-top: 20px;
+  width: 1200px;
+  font-size: 14px;
+  text-align: center;
+}
+.friend_item {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+/* footer */
+.footer {
+  margin-top: 20px;
+  background-color: #2d3237;
+}
+.foot-content {
+  width: 1200px;
+  padding: 50px 0;
+  color: #BFBFBF;
+}
+.copyRight {
+  margin-top: 10px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}

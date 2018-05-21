@@ -1,0 +1,188 @@
+<!-- 首页顶部导航 -->
+
+<div nz-row class="header">
+  <div class="welcome">
+      <div class="time">hello,上午好！今天是：2018年4月19日 星期四</div>
+      <div class="greeting">欢迎来访 张亭炜 小姐姐的个人博客 ~*.*~ </div>
+  </div>
+  <div nz-row class="banner"><img src="/assets/banner.jpg" alt=""></div>
+  <div class="nav" nz-row [nzType]="'flex'" [nzJustify]="'center'">
+      <div class="nav-content" nz-row  [nzGutter]="15" >
+        <div nz-col [nzSpan]="3">
+        <a href="#" class="logo"></a>
+        </div>    
+        <div nz-col [nzSpan]="3">
+          <a routerLink="/index" routerLinkActive="active" class="gutter-box"><i class="anticon anticon-home"></i>首页</a> 
+        </div>
+        <div nz-col [nzSpan]="3">
+          <a routerLink="/share" routerLinkActive="active" class="gutter-box"><i class="anticon anticon-share-alt"></i>技术分享</a> 
+        </div>
+        <div nz-col [nzSpan]="3">
+          <a routerLink="/soul" routerLinkActive="active" class="gutter-box"><i class="anticon anticon-customer-service"></i>灵魂感悟</a>
+        </div>
+        <div nz-col [nzSpan]="3">
+          <a routerLink="/case" routerLinkActive="active" class="gutter-box"><i class="anticon anticon-appstore"></i>案例展示</a> 
+        </div>
+        <div nz-col [nzSpan]="3">
+          <a routerLink="/aboutme" routerLinkActive="active" class="gutter-box aboutme"><i class="anticon anticon-heart"></i>关于我</a> 
+        </div>
+        <div nz-col [nzSpan]="6">
+          <div class="gutter-box">
+              <nz-input [nzType]="'search'" [nzPlaceHolder]="'搜索'" [(ngModel)]="_value" style="width: 200px;" (nzOnSearch)="onSearch($event)"></nz-input>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<div 
+  class="main" 
+  nz-row 
+  [nzType]="'flex'" 
+  [nzJustify]="'center'">
+  <div nz-row class="main-content" [nzGutter]="20" >
+    <div nz-col [nzSpan]="18">
+      <router-outlet></router-outlet>
+    </div>
+    <div nz-col [nzSpan]="6" class="aside">
+      <!-- 名片 -->
+      <div nz-row class="card">
+        <div nz-row >
+          <div nz-col [nzSpan]="8">
+              <nz-avatar nzIcon="user" [nzShape]="'square'" [nzSize]="'large'" nzSrc="/assets/avator.jpg"></nz-avatar>        
+          </div>
+          <div nz-col [nzSpan]="16">
+            <div nz-row class="title">
+              <strong><i class="anticon anticon-user"></i>博主：</strong>
+              TTYuLi
+            </div>
+            <div nz-row class="cardWord">
+                张亭炜个人博客，是一个记录个人生活和分享网络技术，专注于前端开发的独立博客(queenlive.top)。
+            </div>
+          </div>
+        </div>
+        <div nz-row class="interact">
+          <div nz-col [nzSpan]="12" class="view">
+              <i class="anticon anticon-eye"></i>浏览了1000次
+          </div>
+          <div nz-col [nzSpan]="12" class="message">
+              <i class="anticon anticon-message"></i>留言999条
+          </div>
+        </div>
+      </div>
+      <!-- 热门信息 -->
+      <div nz-row class="hot">
+          <nz-tabset>
+              <nz-tab *ngFor="let tab of tabs">
+                <ng-template #nzTabHeading>
+                  {{tab.name}}
+                </ng-template>
+                <!-- <span>{{tab.content}}</span> -->
+                <app-caption-list></app-caption-list>
+                <app-caption-list></app-caption-list>
+                <app-caption-list></app-caption-list>
+                <app-caption-list></app-caption-list>
+              </nz-tab>
+            </nz-tabset>
+      </div>
+      <!-- 标签 -->
+      <div nz-row class="tag">
+         <div nz-row class="title"><i class="anticon anticon-tags"></i>热门标签</div>
+         <div nz-row [nzGutter]="3">
+           <div nz-col [nzSpan]="6" *ngFor="let tag of tags"><nz-tag [nzColor]="tag.color" class="tag-info">{{tag.keyword}}</nz-tag></div>
+         </div>
+      </div>
+      <!-- 最新留言 -->
+      <div nz-row class="leaveMeaasge">
+        <div nz-row class="title"><i class="anticon anticon-message"></i>最新留言</div>
+        <div nz-row class="messageList">
+          <div nz-col [nzSpan]="5">
+              <nz-avatar nzIcon="user" [nzShape]="'circle'" [nzSize]="'middle'" nzSrc=""></nz-avatar>                      
+          </div>
+          <div nz-col [nzSpan]="19">
+            <div nz-row>XP系统与影响吗？没有的话装XP系统</div>
+            <div nz-row class="listTime">某某评论于: 08-09</div>
+          </div>
+        </div>
+        <div nz-row class="messageList">
+            <div nz-col [nzSpan]="5">
+                <nz-avatar nzIcon="user" [nzShape]="'circle'" [nzSize]="'middle'" nzSrc=""></nz-avatar>                      
+            </div>
+            <div nz-col [nzSpan]="19">
+              <div nz-row>XP系统与影响吗？没有的话装XP系统</div>
+              <div nz-row class="listTime">某某评论于: 08-09</div>
+            </div>
+        </div>
+        <div nz-row class="messageList">
+            <div nz-col [nzSpan]="5">
+                <nz-avatar nzIcon="user" [nzShape]="'circle'" [nzSize]="'middle'" nzSrc=""></nz-avatar>                      
+            </div>
+            <div nz-col [nzSpan]="19">
+              <div nz-row>XP系统与影响吗？没有的话装XP系统</div>
+              <div nz-row class="listTime">某某评论于: 08-09</div>
+            </div>
+        </div>
+      </div>
+      <!-- 读者墙 -->
+      <div nz-row class="readers">
+        <div nz-row class="title">
+            <i class="anticon anticon-star"></i>读者墙
+        </div>
+        <div nz-row [nzGutter]="2" class="readerList" >
+          <div nz-col [nzSpan]="4" class="reader" *ngFor="let index of array">
+              <nz-avatar nzIcon="user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+          </div>
+        </div>
+      </div>
+      <!-- 友情链接 -->
+      <div nz-row class="friend">
+        <div nz-row class="title"><i class="anticon anticon-link"></i>友情链接</div>
+        <div nz-row [nzGutter]="2">
+          <div nz-col [nzSpan]="4" >
+            <a href="#">博客园</a>
+          </div>
+          <div nz-col [nzSpan]="4">
+            <a href="#">git地址</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+<!-- 友情链接 -->
+<div 
+  nz-row 
+  [nzType]="'flex'" 
+  [nzJustify]="'center'" 
+  class="frindLink">
+  <div nz-row [nzGutter]="16" class="frindLink_content">
+    <div nz-col [nzSpan]="4"><div class="friend_item">杨洋博客</div></div>
+    <div nz-col [nzSpan]="4"><div class="friend_item">杨洋博客</div></div>
+    <div nz-col [nzSpan]="4"><div class="friend_item">杨洋博客</div></div>
+    <div nz-col [nzSpan]="4"><div class="friend_item">杨洋博客</div></div>
+    <div nz-col [nzSpan]="4"><div class="friend_item">杨洋博客</div></div>
+    <div nz-col [nzSpan]="4"><div class="friend_item">杨洋博客</div></div>
+  </div>
+</div>
+<div 
+  nz-row
+  class="footer"
+  [nzType]="'flex'" 
+  [nzJustify]="'center'" >
+  <div nz-row class="foot-content" >   
+      <div nz-col [nzSpan]="4">logo</div>
+      <div nz-col [nzSpan]="12">
+        <div nz-row>
+          <div nz-col [nzSpan]="3">文章目录</div>
+          <div nz-col [nzSpan]="3">网站地图</div>
+          <div nz-col [nzSpan]="3">举报中心</div>
+          <div nz-col [nzSpan]="15">京ICP备17044740号-1 京公网安备 11010502034353号</div>
+        </div>
+        <div nz-row class="copyRight">CopyRight &copy; 2017-2019 Designed by TTYuLi </div>
+      </div>
+      <div nz-col [nzSpan]="8">
+        <div nz-col [nzSpan]="4"> <i class="iconfont icon-email"></i>邮箱</div>
+        <div nz-col [nzSpan]="4"> <i class="iconfont icon-weixin"></i>微信</div>
+        <div nz-col [nzSpan]="4"> <i class="iconfont icon-weibo"></i>微博</div>
+      </div>    
+  </div>
+</div>

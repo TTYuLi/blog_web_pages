@@ -1,0 +1,56 @@
+:host ::ng-deep .ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  color: #fff;
+  overflow: hidden;
+}
+
+h3 {
+  color: #fff;
+}
+.selected {
+  padding: 10px;
+  margin-top: 30px;
+  background-color: #fff;
+}
+ 
+.selected-table {
+  padding: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+}
+/* 今日头条 */
+.todayTop {
+  margin-top: 20px;
+}
+.topOne {
+  background: #fff;
+}
+
+/* 主题展示 */
+.theme {
+  background-color: #fff;
+}
+.theme_content {
+  padding: 15px;
+  border-top: 1px solid #ccc;
+}
+.theme_item {
+  padding: 10px;
+  /* border-right: 1px solid #ccc; */
+}
+.theme_item:hover {
+  background-color: #ccc;
+}
+/* 其他主题 */
+.tags_item {
+  margin-top: 20px;
+  background: #fff;
+}
+.tags_info {
+  padding: 10px 15px;
+  border-top: 1px solid #ccc;
+  text-align: justify;
+}

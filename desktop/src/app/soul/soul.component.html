@@ -1,0 +1,21 @@
+<!-- 当前位置 -->
+<nz-breadcrumb>
+    <nz-breadcrumb-item>
+      <i class="anticon anticon-home"></i>
+      <a routerLink="/index">首页</a>
+    </nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+      <a routerLink="/soul" class="active">灵魂感悟</a>
+    </nz-breadcrumb-item>
+</nz-breadcrumb>
+<!-- 技术分享 -->
+<div nz-row class="todayTop">
+  <div nz-row class="topOne">
+      <div nz-row class="title"><i class="anticon anticon-notification"></i>灵魂感悟</div>
+  </div>
+      <app-share-list></app-share-list>
+      <app-share-list></app-share-list>
+      <app-share-list></app-share-list>
+      <app-share-list></app-share-list>
+      <nz-pagination [nzPageIndex]="3" [nzTotal]="50"></nz-pagination>
+</div>

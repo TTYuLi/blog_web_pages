@@ -1,0 +1,16 @@
+
+/* 今日头条 */
+.todayTop {
+  margin-top: 20px;
+}
+.title {
+  padding: 10px;
+  color: rgb(228, 31, 31);
+}
+.item_title {
+  color: rgb(228, 31, 31);
+  font-size: 16px;
+}
+.topOne {
+  background: #fff;
+}
